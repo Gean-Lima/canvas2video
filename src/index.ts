@@ -26,7 +26,7 @@ export class Canvas2Video {
       deferred.reject = reject;
     })
     this.deferred = deferred;
-    const stream = (<CanvasElement>this.config.canvas).captureStream();
+    const stream = (<CanvasElement>this.config.canvas).captureStream(this.config.fps);
     const recorder = new MediaRecorder(stream, { mimeType: this.config.mimeType });
     const data: any[] = [];
     recorder.ondataavailable = function (event: MediaRecorderEvent) {

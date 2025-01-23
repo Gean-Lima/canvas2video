@@ -9,6 +9,7 @@ export interface FFmpegWorkerOptions {
 }
 export interface Options {
   canvas?: HTMLCanvasElement;
+  fps?: number
   mimeType?: string;
   audio?: string;
   outVideoType?: string;
